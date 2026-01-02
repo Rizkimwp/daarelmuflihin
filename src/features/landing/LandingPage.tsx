@@ -8,6 +8,7 @@ import {
   Mail, ArrowRight, Play, MapPin, Phone, ArrowUpRight,
   MessageCircle, Clock, Heart
 } from 'lucide-react';
+import Navbar from '@/app/layout/navbar';
 
 export default function LandingPage() {
 
@@ -18,34 +19,13 @@ export default function LandingPage() {
         <div className="w-full bg-[#3fd344] relative">
   
           {/* Decorative Blobs - Absolute Positioned */}
-          <div className="absolute top-20 left-10 w-64 h-64 bg-white/5 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-lime-400/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-64 h-64 bg-white/40 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-lime-400/50 rounded-full blur-3xl"></div>
   
-          {/* --- NAVIGATION (Full Width Content) --- */}
-          <nav className="relative z-10 flex justify-between items-center px-6 md:px-12 py-8 max-w-[1440px] mx-auto">
-            <div className="flex items-center gap-2 bg-white/70 backdrop-blur-md p-2 px-5 rounded-full border border-white/20">
-              <img
-                src="/logo.png"
-                alt="Siswa Islami"
-                width={40}
-                height={40}
-                className=""
-              />
-              <span className="text-black font-bold tracking-tight text-sm md:text-base">
-                YAYASAN <span className="text-green-800 font-light">DAAR EL MUFLIHIN</span>
-              </span>
-            </div>
-  
-            <div className="hidden lg:flex items-center gap-10 text-white/80 text-sm font-semibold tracking-wide">
-              <a href="#about" className="hover:text-lime-400 transition-colors">Tentang Kami</a>
-              <a href="#unit" className="hover:text-lime-400 transition-colors">Unit Pendidikan</a>
-              <a href="#kontak" className="hover:text-lime-400 transition-colors">Kontak</a>
-            </div>
-  
-          </nav>
-  
+          {/* --- NAVIGATION --- */}
+          <Navbar />
           {/* --- HERO CONTENT (Full Width Container) --- */}
-          <section className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-20 md:pb-32 grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+          <section className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 pt-30 md:pt-45 pb-20 md:pb-32 grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
             {/* Text Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -53,12 +33,12 @@ export default function LandingPage() {
               transition={{ duration: 0.8 }}
               className="text-center lg:text-left z-20"
             >
-              <h1 className="text-4xl sm:text-5xl md:text-[4rem] font-black text-white leading-[1.1] md:leading-[0.9] mb-6 md:mb-8">
+              <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] font-black text-white leading-[1.1] md:leading-[1] mb-6 md:mb-8">
                 Yayasan <br className="hidden md:block" />
                 <span className="relative inline-block">
-                  Pendidikan Islam
+                  Pendidikan Islam <br /> Madrosatul Qur&apos;an
                   <svg
-                    className="absolute -bottom-2 md:-bottom-20 left-0 w-full h-auto"
+                    className="absolute -bottom-15 md:-bottom-20 left-0 w-full h-auto"
                     viewBox="0 0 300 20"
                     fill="none"
                     preserveAspectRatio="none"
@@ -66,7 +46,7 @@ export default function LandingPage() {
                     <path d="M5 15C50 5 150 5 295 15" stroke="#BEF264" strokeWidth="4" strokeLinecap="round" />
                   </svg>
                 </span> <br />
-                <span className="text-lime-400 md:text-white">Daar El Muflihin</span>
+                <span className="text-white">Daar El Muflihin</span>
               </h1>
   
               <p className="text-white/80 text-base md:text-xl max-w-md mx-auto lg:mx-0 mb-8 md:mb-12 leading-relaxed font-medium">
@@ -80,12 +60,12 @@ export default function LandingPage() {
                     <ArrowUpRight size={18} />
           </div>
                 </button>
-                <button className="flex items-center gap-3 text-white font-bold group py-2">
+                {/* <button className="flex items-center gap-3 text-white font-bold group py-2">
                   <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border-2 border-white/30 flex items-center justify-center group-hover:bg-white/10 transition-colors">
                     <Play size={18} fill="white" className="ml-1" />
                   </div>
                   Video Profil
-                </button>
+                </button> */}
               </div>
             </motion.div>
   
@@ -186,7 +166,7 @@ export default function LandingPage() {
           <div className="grid md:grid-cols-3 gap-10">
             {[
               { title: 'RA (Taman Kanak-kanak)', code: 'Preschool', icon: <Heart className="text-pink-500" /> },
-              { title: 'SD IT', code: 'Elementary', icon: <Award className="text-blue-500" /> },
+              { title: 'Madrasah Ibtidai (MI)', code: 'Elementary', icon: <Award className="text-blue-500" /> },
               { title: 'SMP IT', code: 'Junior High', icon: <Shield className="text-indigo-600" /> }
             ].map((unit, i) => (
               <motion.div key={i} whileHover={{ y: -15 }} className="bg-white p-12 rounded-[4rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all group">
