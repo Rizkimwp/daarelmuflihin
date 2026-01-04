@@ -165,9 +165,9 @@ export default function LandingPage() {
           </div>
           <div className="grid md:grid-cols-3 gap-10">
             {[
-              { title: 'RA (Taman Kanak-kanak)', code: 'Preschool', icon: <Heart className="text-pink-500" /> },
-              { title: 'Madrasah Ibtidai (MI)', code: 'Elementary', icon: <Award className="text-blue-500" /> },
-              { title: 'SMP IT', code: 'Junior High', icon: <Shield className="text-indigo-600" /> }
+              { title: 'RA (Taman Kanak-kanak)', code: 'Preschool', icon: <Heart className="text-pink-500" />, href: "#" },
+              { title: 'Madrasah Ibtidai (MI)', code: 'Elementary', icon: <Award className="text-blue-500" />, href: "#" },
+              { title: 'SMP IT', code: 'Junior High', icon: <Shield className="text-indigo-600" />, href: "http://ppdbtk.test" }
             ].map((unit, i) => (
               <motion.div key={i} whileHover={{ y: -15 }} className="bg-white p-12 rounded-[4rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all group">
                 <div className="bg-slate-50 w-20 h-20 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-[#5D3FD3] transition-colors">
@@ -175,9 +175,9 @@ export default function LandingPage() {
                 </div>
                 <p className="text-[#5D3FD3] font-bold text-sm uppercase tracking-[0.3em] mb-3">{unit.code}</p>
                 <h3 className="text-3xl font-black text-slate-900 mb-8">{unit.title}</h3>
-                <button className="flex items-center gap-3 font-extrabold text-[#5D3FD3] group-hover:gap-5 transition-all text-lg">
+                <a href={unit.href} target='_blank' className="flex items-center gap-3 font-extrabold text-[#5D3FD3] group-hover:gap-5 transition-all text-lg">
                   Selengkapnya <ArrowRight size={24} />
-                </button>
+                </a>
               </motion.div>
             ))}
           </div>
