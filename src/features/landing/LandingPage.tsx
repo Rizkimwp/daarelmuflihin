@@ -130,8 +130,8 @@ export default function LandingPage() {
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <div className="relative">
               <div className="bg-[#5D3FD3] w-full aspect-[4/3] rounded-[4rem] overflow-hidden shadow-2xl relative">
-                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1000" className="w-full h-full object-cover mix-blend-overlay opacity-50" alt="About" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#5D3FD3] to-transparent"></div>
+                <img src="/gedung.jpeg" className="w-full h-full object-cover mix-blend-overlay opacity-50" alt="About" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-[#07ef394d] to-transparent"></div>
               </div>
               <div className="absolute -bottom-10 -right-10 bg-lime-400 p-10 rounded-[3rem] shadow-2xl hidden md:block border-8 border-white">
                 <p className="text-[#5D3FD3] font-black text-5xl">20+</p>
@@ -139,9 +139,9 @@ export default function LandingPage() {
               </div>
             </div>
             <div>
-              <h2 className="text-[#5D3FD3] text-6xl font-black mb-8 leading-[1.1]">Mencetak Generasi Qur&apos;ani di Era Digital</h2>
+              <h2 className="text-[#5D3FD3] text-6xl font-black mb-8 leading-[1.1]">Mencetak Generasi Qur&apos;ani yang berakhlaq mulia</h2>
               <p className="text-slate-600 text-xl mb-10 leading-relaxed font-medium">
-                Yayasan Daar El Muflihin berkomitmen menyediakan lingkungan belajar yang inklusif dan islami. Kami mengasah potensi unik santri dengan nilai tauhid dan teknologi.
+                Yayasan Daar El Muflihin berkomitmen menyediakan lingkungan belajar yang inklusif dan islami
               </p>
               <div className="space-y-5">
                 {['Tenaga Pendidik Profesional', 'Fasilitas Smart Classroom', 'Kurikulum Berbasis Adab'].map((list, i) => (
@@ -167,7 +167,7 @@ export default function LandingPage() {
             {[
               { title: 'RA (Taman Kanak-kanak)', code: 'Preschool', icon: <Heart className="text-pink-500" />, href: "#" },
               { title: 'Madrasah Ibtidai (MI)', code: 'Elementary', icon: <Award className="text-blue-500" />, href: "#" },
-              { title: 'SMP IT', code: 'Junior High', icon: <Shield className="text-indigo-600" />, href: "http://ppdbtk.test" }
+              { title: 'SMP IT', code: 'Junior High', icon: <Shield className="text-indigo-600" />, href: "https://smpit.daarelmuflihin.id" }
             ].map((unit, i) => (
               <motion.div key={i} whileHover={{ y: -15 }} className="bg-white p-12 rounded-[4rem] shadow-sm border border-slate-100 hover:shadow-2xl transition-all group">
                 <div className="bg-slate-50 w-20 h-20 rounded-[2rem] flex items-center justify-center mb-10 group-hover:bg-[#5D3FD3] transition-colors">
